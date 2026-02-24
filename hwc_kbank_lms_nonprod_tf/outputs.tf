@@ -67,10 +67,10 @@ output "flowlog_ids" {
 # ============================================================================
 # KMS Outputs
 # ============================================================================
-/*output "kms_ids" {
+output "kms_ids" {
   description = "Map of KMS names to IDs"
-  value       = { for k, v in huaweicloud_kms_key.kms_encryption : k => v.id }
-}*/
+  value       = { for k, v in huaweicloud_kms_key.this : k => v.id }
+}
 
 # ============================================================================
 # Security Group Outputs

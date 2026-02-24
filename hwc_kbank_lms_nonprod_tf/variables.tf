@@ -97,14 +97,14 @@ variable "kms_encryption" {
   description = "Map of KMS Key Encryption disk create"
   type = map(object({
 
-    keyRegion           = optional(string, "ap-southeast-2")
+    keyRegion           = optional(string)
     keyAlias            = string
     keyPendingDays      = optional(string)
-    keyIsEnabled        = optional(bool, false)
-    keyAlgorithm        = optional(string, "AES_256")
-    keyRotationEnabled  = optional(bool, false)
+    keyIsEnabled        = optional(bool)
+    keyAlgorithm        = optional(string)
+    keyRotationEnabled  = optional(bool)
     keyRotationInterval = optional(string)
-    keyDescription      = optional(string, "createdByTerraform")
+    keyDescription      = optional(string)
   }))
   default = {}
 }
